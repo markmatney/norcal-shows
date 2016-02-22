@@ -1,7 +1,7 @@
 {
   "name": "norcal-shows",
   "version": "0.1.0",
-  "description": "Web application to provide a useful (search-able, filter-able, more read-able) interface for Steve Koepke's list of Bay Area and Northern California shows.",
+  "description": "Client application that provides a useful (search-able, filter-able, more read-able) interface to Steve Koepke's list of Bay Area and Northern California shows.",
   "dependencies": {
     "express": "~4.13.4",
     "http-server": "~0.9.0",
