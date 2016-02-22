@@ -1,0 +1,55 @@
+html {
+  font-family: Courier;
+}
+
+p {
+  margin: 0;
+}
+
+.header {
+  font-weight: bold;
+  border: 1px solid black;
+  background-color: #F77;
+  height: 100%;
+/*
+  overflow: auto;
+  height: auto;
+*/
+}
+
+.left-top {
+  float: left;
+  width: 15%;
+  justify-content: center;
+}
+.left {
+  float: left;
+  width: 30%;
+  justify-content: center;
+}
+.middle {
+  float: left;
+  width: 15%;
+  justify-content: center;
+}
+.right {
+  float: right;
+  width: 70%;
+  height: 100%;
+}
+.container {
+  padding: 0 0.5em;
+  box-sizing: border-box;
+  height: 3em;
+  display: flex;
+  align-items: center;
+}
+
+.detail {
+  border: none;
+  background-color: #CCC;
+}
+
+.left p, .left-top p, .middle p {
+  text-align: center;
+}

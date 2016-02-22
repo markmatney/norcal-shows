@@ -1,0 +1,17 @@
+{
+  "name": "norcal-shows",
+  "version": "0.1.0",
+  "description": "Web application to provide a useful (search-able, filter-able, more read-able) interface for Steve Koepke's list of Bay Area and Northern California shows.",
+  "dependencies": {
+    "express": "~4.13.4",
+    "http-server": "~0.9.0",
+    "snapjs": "~1.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Mark Allen Matney Jr.",
+  "license": "WTFPL"
+}
