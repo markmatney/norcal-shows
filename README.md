@@ -1,4 +1,4 @@
-This is a web application that parses [Steve Koepke](http://www.calweb.com/~skoepke/)'s [list](http://www.jmarshall.com/events/list.txt) of Bay Area concerts, and reorganizes it into a search-able, filter-able, and all-around more useful dataset.
+This is a client-side web application that provides a useful (search-able, filter-able, more read-able) interface to [Steve Koepke](http://www.calweb.com/~skoepke/)'s [list](http://www.jmarshall.com/events/list.txt) of Bay Area and Northern California shows. It depends on a companion server application (code [here](https://github.com/markmatney/bay-area-shows-api) for the data.
 
 # Setup
 
