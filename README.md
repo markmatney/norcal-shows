@@ -2,14 +2,12 @@ This is a web application that parses [Steve Koepke](http://www.calweb.com/~skoe
 
 # Setup
 
-I have Node v0.10.25 and NPM 1.3.10 installed. Tweaks may be required if you are using later versions.
-
-Just get the code, then do
+I have Node v0.10.25 and NPM 1.3.10 installed. Just get the code, then do
 
 ```Shell
 cd norcal-shows
 npm install
-node server.js
+node app/server.js
 ```
 
-to run the app on localhost:3000. To change the port, go into `server.js`.
+to run the app on localhost:3000. To change the port, edit `server.js`.
