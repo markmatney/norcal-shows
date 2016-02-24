@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="segmented-controls.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
+<body ng-controller="theList">
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <div class="snap-drawers">
     <div class="snap-drawer snap-drawer-left">
         <h3>Filter</h3>
+	<!-- TODO: Add checkbox for verbosity. If checked, include comments-->
         <form>
           <div class="segmented-container">
             <span class="segmented single-line">
@@ -41,35 +42,35 @@
           <div class="segmented-container">
             <span class="segmented toprow">
                  <label>
-                <input type="checkbox" value="SUN">
+                <input type="checkbox" value="SUN" ng-model='dayFilter.SUN' ng-checked='dayFilter.SUN'>
                 <span class="label">SUN</span>
               </label>
                  <label>
-                <input type="checkbox" value="MON">
+                <input type="checkbox" value="MON" ng-model='dayFilter.MON' ng-checked='dayFilter.MON'>
                 <span class="label">MON</span>
               </label>
             </span>
             <span class="segmented single-line">
                  <label>
-                <input type="checkbox" value="TUE">
+                <input type="checkbox" value="TUE" ng-model='dayFilter.TUE' ng-checked='dayFilter.TUE'>
                 <span class="label">TUE</span>
               </label>
                  <label>
-                <input type="checkbox" value="WED">
+                <input type="checkbox" value="WED" ng-model='dayFilter.WED' ng-checked='dayFilter.WED'>
                 <span class="label">WED</span>
               </label>
                  <label>
-                <input type="checkbox" value="THR">
+                <input type="checkbox" value="THR" ng-model='dayFilter.THU' ng-checked='dayFilter.THU'>
                 <span class="label">THR</span>
               </label>
             </span>
             <span class="segmented bottomrow">
                  <label>
-                <input type="checkbox" value="FRI">
+                <input type="checkbox" value="FRI" ng-model='dayFilter.FRI' ng-checked='dayFilter.FRI'>
                 <span class="label">FRI</span>
               </label>
                  <label>
-                <input type="checkbox" value="SAT">
+                <input type="checkbox" value="SAT" ng-model='dayFilter.SAT' ng-checked='dayFilter.SAT'>
                 <span class="label">SAT</span>
               </label>
             </span>
@@ -140,9 +141,9 @@
     </div>
   </div>
 
-  <div id="content" class="snap-content" ng-controller="theList">
+  <div id="content" class="snap-content">
 
-    <div ng-repeat="show in shows" ng-if="show.when[0] !== ''">
+    <div ng-repeat="show in shows | filter:filterByDay" ng-if="show.when[0] !== ''">
       <div class="header">
         <div class="left-top container"><p>{{show.when[0]}}</p></div>
         <div class="middle container"><p>{{show.when[1]}}<br>{{show.when[2]}}</p></div>
