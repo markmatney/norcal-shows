@@ -9,7 +9,8 @@ p {
 .header {
   font-weight: bold;
   border: 1px solid black;
-  background-color: #F77;
+  background-color: #FFF;
+  color: #000;
   height: 100%;
 /*
   overflow: auto;
@@ -47,7 +48,8 @@ p {
 
 .detail {
   border: none;
-  background-color: #CCC;
+  background-color: #000;
+  color: #FFF;
 }
 
 .left p, .left-top p, .middle p {

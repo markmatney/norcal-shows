@@ -19,6 +19,9 @@
         <h3>Filter</h3>
 	<!-- TODO: Add checkbox for verbosity. If checked, include comments-->
         <form>
+          <label>Lineup: <input ng-model='lineupSearch'></label>
+          <label>Venue: <input ng-model='venueSearch'></label>
+	  <!--
           <div class="segmented-container">
             <span class="segmented single-line">
                  <label>
@@ -39,6 +42,7 @@
               </label>
             </span>
           </div>
+-->
           <div class="segmented-container">
             <span class="segmented toprow">
                  <label>
@@ -60,7 +64,7 @@
                 <span class="label">WED</span>
               </label>
                  <label>
-                <input type="checkbox" value="THR" ng-model='dayFilter.THU' ng-checked='dayFilter.THU'>
+                <input type="checkbox" value="THR" ng-model='dayFilter.THR' ng-checked='dayFilter.THR'>
                 <span class="label">THR</span>
               </label>
             </span>
@@ -75,6 +79,7 @@
               </label>
             </span>
           </div>
+	  <!--
           <div class="segmented-container">
             <span class="segmented toprow">
                  <label>
@@ -131,19 +136,21 @@
               </label>
             </span>
           </div>
+-->
         </form>
     </div>
     <div class="snap-drawer snap-drawer-right">
-      <div>about</div>
-      <a href="http://www.wtfpl.net/"><img
+	    <h3>About</h3>
+	    <p>Developed by <a href="https://github.com/markmatney">Mark Allen Matney, Jr.</a> and licensed under <a href="http://www.wtfpl.net/"><img
 	             src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
 		            width="80" height="15" alt="WTFPL" /></a>
+		    </p>
     </div>
   </div>
 
   <div id="content" class="snap-content">
 
-    <div ng-repeat="show in shows | filter:filterByDay" ng-if="show.when[0] !== ''">
+    <div ng-repeat="show in shows | filter:filterByDay | filter:lineupFilter | filter:venueFilter" ng-if="show.when[0] !== ''">
       <div class="header">
         <div class="left-top container"><p>{{show.when[0]}}</p></div>
         <div class="middle container"><p>{{show.when[1]}}<br>{{show.when[2]}}</p></div>
