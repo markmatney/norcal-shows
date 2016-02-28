@@ -1,6 +1,6 @@
 .segmented {
-    //display: inline-block;
-	float: left;
+    display: table;
+    margin: 0 auto;
 }
 .segmented .label {
     background-color: #eee;
@@ -47,7 +47,6 @@
 }
 
 .segmented-container{
-    margin: 30px;
 	//display: flex;
     align-items: center;
 
