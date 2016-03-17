@@ -15,5 +15,5 @@
     "start": "node app/server.js"
   },
   "author": "Mark Allen Matney, Jr.",
-  "license": "WTFPL"
+  "license": "MIT"
 }

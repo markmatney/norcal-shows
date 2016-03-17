@@ -11,42 +11,15 @@
   <link rel="stylesheet" href="segmented-controls.css">
 </head>
 <body ng-controller="theList">
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
   <div class="snap-drawers">
     <div class="snap-drawer snap-drawer-left">
         <h3>Filter</h3>
-	<!-- TODO: Add checkbox for verbosity. If checked, include comments-->
 	<p>Filter shows by lineup, venue, or day of the week!</p>
         <form>
           <label>Lineup: <input ng-model='lineupSearch'></label>
 	  <br>
           <label>Venue: <input ng-model='venueSearch'></label>
 	  <br>
-	  <!--
-          <div class="segmented-container">
-            <span class="segmented single-line">
-                 <label>
-                <input type="radio" name="ages" value="a/a" checked>
-                <span class="label">a/a</span>
-              </label>
-                 <label>
-                <input type="radio" name="ages" value="6+">
-                <span class="label">6+</span>
-              </label>
-                 <label>
-                <input type="radio" name="ages" value="18+">
-                <span class="label">18+</span>
-              </label>
-                 <label>
-                <input type="radio" name="ages" value="21+">
-                <span class="label">21+</span>
-              </label>
-            </span>
-          </div>
-	  <br>
--->
           <div class="segmented-container">
             <span class="segmented toprow">
                  <label>
@@ -83,65 +56,6 @@
               </label>
             </span>
           </div>
-	  <br>
-	  <!--
-          <div class="segmented-container">
-            <span class="segmented toprow">
-                 <label>
-                <input type="checkbox" value="JAN">
-                <span class="label">JAN</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="FEB">
-                <span class="label">FEB</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="MAR">
-                <span class="label">MAR</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="APR">
-                <span class="label">APR</span>
-              </label>
-            </span>
-            <span class="segmented">
-                 <label>
-                <input type="checkbox" value="MAY">
-                <span class="label">MAY</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="JUN">
-                <span class="label">JUN</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="JUL">
-                <span class="label">JUL</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="AUG">
-                <span class="label">AUG</span>
-              </label>
-            </span>
-            <span class="segmented bottomrow">
-                 <label>
-                <input type="checkbox" value="SEP">
-                <span class="label">SEP</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="OCT">
-                <span class="label">OCT</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="NOV">
-                <span class="label">NOV</span>
-              </label>
-                 <label>
-                <input type="checkbox" value="DEC">
-                <span class="label">DEC</span>
-              </label>
-            </span>
-          </div>
--->
         </form>
     </div>
     <div class="snap-drawer snap-drawer-right">
@@ -149,9 +63,7 @@
 	    <p>Developed by <a href="https://github.com/markmatney">Mark Allen Matney, Jr.</a></p>
     </div>
   </div>
-
   <div id="content" class="snap-content">
-
     <div ng-repeat="show in shows | filter:filterByDay | filter:lineupFilter | filter:venueFilter" ng-if="show.when[0] !== ''">
       <div class="header">
         <div class="left-top container"><p>{{show.when[0]}}</p></div>
@@ -181,7 +93,6 @@
       </div>
     </div>
   </div>
-<!-- clicking on element filters by that element! -->
   <script src="/angular/angular.min.js"></script>
   <script src="/snapjs/snap.min.js"></script>
   <script src="app.js"></script>

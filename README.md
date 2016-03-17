@@ -2,7 +2,7 @@ This is a client-side web application that provides a useful (search-able, filte
 
 # Setup
 
-I have Node v0.10.25 and NPM 1.3.10 installed. Just get the code, then do
+I have Node v5.8.0 and NPM 3.8.1 installed. Just get the code, then do
 
 ```Shell
 cd norcal-shows
